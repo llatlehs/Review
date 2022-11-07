@@ -1,0 +1,54 @@
+:root {
+    --magenta: pink;
+    --slategrey: grey;
+    --textsize: 18px;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--slategrey);
+}
+
+.item {
+    background-color: var(--magenta);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--textsize);
+}
+.item1 {
+    grid-column: span 2;
+}
+.item2 {
+    grid-row: span 3;
+    background-image: url(item2.png);
+}
+.item8 {
+    grid-row: span 3;
+    background-image: url(item3.png);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    grid-template-rows: 135px 135px 135px 135px 135px 135px 135px;
+}
+
+@media only screen and (max-width:950px) {
+    .grid {
+        display: grid;
+        grid-auto-rows: auto;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .grid {
+        display: grid;
+        grid-auto-rows: auto;
+    }
+}
